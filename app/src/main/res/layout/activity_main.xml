@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gestureuse.gestureuse.MainActivity">
+
+    <com.example.gestureuse.gestureuse.GestureFrame
+        android:id="@+id/gesture_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_Msg"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textSize="17sp"
+        android:layout_centerInParent="true"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:background="@drawable/round_shape_halftrans"/>
+
+    <com.example.gestureuse.gestureuse.FocusBoxView
+        android:id="@+id/iv_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/circle_green"/>
+
+</RelativeLayout>
