@@ -28,18 +28,6 @@ public class FocusBoxView extends AppCompatImageView {
         layoutParams.topMargin = (int) (y - getMeasuredHeight() / 2);
         setLayoutParams(layoutParams);
         setVisibility(VISIBLE);
-
-        handler.sendEmptyMessageDelayed(0,500);
     }
-
-    private Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            if(msg.what == 0){
-                setBackgroundResource(R.mipmap.circle_green);
-                handler.sendEmptyMessageDelayed(1,500);
-            }
-        }
-    };
 
 }

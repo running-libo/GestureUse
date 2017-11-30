@@ -40,9 +40,11 @@ public class GestureFrame extends RelativeLayout{
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
                 startX = event.getX();
+                callBack.callBack("按下");
                 break;
             case MotionEvent.ACTION_UP:
                 endX = event.getX();
+                callBack.callBack("抬起");
 
                 if(endX - startX > 200){
                     callBack.rightEvent();
@@ -62,8 +64,8 @@ public class GestureFrame extends RelativeLayout{
 
         @Override
         public boolean onDown(MotionEvent e) {
-            callBack.callBack("按下");
-            return true;
+
+            return false;
         }
 
         @Override
@@ -82,6 +84,7 @@ public class GestureFrame extends RelativeLayout{
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
             curHeight += distanceY;
             callBack.callBackScale("上下滑动  " + curHeight);
+            //distanceX 左右滑动值
             return false;
         }
 
